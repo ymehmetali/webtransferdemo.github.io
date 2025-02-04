@@ -1,10 +1,120 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Demo</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Giriş Yap</title>
+    <style>
+        /* Genel sayfa stili */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Başlık stili */
+        h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Login formu */
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* Giriş formu grubu */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+            .input-group label {
+                font-size: 16px;
+                color: #333;
+                margin-bottom: 8px;
+                text-align: left;
+                width: 100%;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+                border: 2px solid #3498db;
+                border-radius: 8px;
+                outline: none;
+                transition: 0.3s;
+                background-color: #fff;
+                box-sizing: border-box;
+            }
+
+                .input-group input:focus {
+                    border-color: #2980b9;
+                    box-shadow: 0 4px 8px rgba(52, 152, 219, 0.2);
+                }
+
+        /* Buton grubu */
+        .button-group {
+            margin-top: 20px;
+        }
+
+            .button-group button {
+                width: 100%;
+                padding: 12px;
+                font-size: 18px;
+                color: white;
+                background-color: #3498db;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+                box-shadow: 0 4px 8px rgba(52, 152, 219, 0.1);
+                box-sizing: border-box;
+            }
+
+                .button-group button:hover {
+                    background-color: #2980b9;
+                    transform: scale(1.05);
+                    box-shadow: 0 6px 12px rgba(52, 152, 219, 0.2);
+                }
+
+                .button-group button:active {
+                    background-color: #1f6592;
+                }
+
+        /* Hata ve başarı mesajları */
+        .error {
+            color: #e74c3c;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .success {
+            color: #27ae60;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
     <div class="login-container">
@@ -24,6 +134,7 @@
             <p id="message" class="error"></p>
         </form>
     </div>
+
     <script>
         function validateLogin() {
             var username = document.getElementById("username").value;
