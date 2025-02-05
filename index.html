@@ -144,10 +144,7 @@
             var messageElement = document.getElementById("message");
 
             // Basit kullanıcı adı ve şifre doğrulama (bu güvenli değildir)
-            if (username === "admin" && password === "1234") {
-                messageElement.textContent = "Giriş başarılı!";
-                messageElement.classList.remove("error");
-                messageElement.classList.add("success");
+            
 
                 // Başarılı girişten sonra yönlendirme
                 setTimeout(function () {
